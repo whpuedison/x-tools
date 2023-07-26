@@ -56,8 +56,8 @@ dependencies:
     specifier: ^18.0.0
     version: 18.0.0(react@18.0.0)
   taro-hooks:
-    specifier: latest
-    version: 2.0.3(@tarojs/taro-h5@3.5.2)(@tarojs/taro@3.5.2)
+    specifier: ^1.5.10
+    version: 1.5.10(@tarojs/taro@3.5.2)(react@18.0.0)
 
 devDependencies:
   '@babel/core':
@@ -2962,44 +2962,6 @@ packages:
       defer-to-connect: 1.1.3
     dev: true
 
-  /@taro-hooks/ahooks@2.0.3:
-    resolution: {integrity: sha512-ehW+/dSjQA21ImnZyP3FenmWnwTPCkbQhvl2yalDKX0nbXTSd7q8nvYpRjSHPWT0AZBCOo/weIGrzfYUcnns7w==}
-    engines: {node: '>=12.0.0'}
-    dependencies:
-      '@taro-hooks/shared': 2.0.3
-      lodash-wechat: 1.0.0
-    dev: false
-
-  /@taro-hooks/blueimp-canvas-to-blob@2.0.3:
-    resolution: {integrity: sha512-u5WKB8QT1fsNiEmtRoRIARxWdMPoBXGxeKI03ubHpfMcZ5SrttLvhkC9j+LCJFUNv4F24lw48hoJTXl4ZpeE+Q==}
-    dev: false
-
-  /@taro-hooks/compressorjs@2.0.3:
-    resolution: {integrity: sha512-U/ErOoGJXtquhauFhKF4B70aY36dGWtdZMCEZdfJ55o746bMbaytsv4lbdJbxvbTMW4RdKhM1YinG6H+RbkIJA==}
-    dependencies:
-      '@taro-hooks/blueimp-canvas-to-blob': 2.0.3
-      is-blob: 2.1.0
-    dev: false
-
-  /@taro-hooks/shared@2.0.3:
-    resolution: {integrity: sha512-VpJu6ez+JQCU7M/ocXSG+T+ue7W/E7DxY/HegQqb+CqDpEyWi7/JdnmDyCPRebpKdazDgXA4dBel/o541kWW5g==}
-    dev: false
-
-  /@taro-hooks/use-request@2.0.3(@tarojs/taro-h5@3.5.2)(@tarojs/taro@3.5.2):
-    resolution: {integrity: sha512-/knlqIoZ5cEqQfKvFzbA/EZDfUXicy6onHzMIToPu3Y7RIx5Sn1r2OF+xW+PvuAtBAmUXTg/T2dTRXepx737sA==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      '@tarojs/taro': '>= 3.4.x'
-      '@tarojs/taro-h5': '>= 3.4.x'
-    dependencies:
-      '@taro-hooks/ahooks': 2.0.3
-      '@taro-hooks/shared': 2.0.3
-      '@tarojs/taro': 3.5.2(@types/react@18.0.0)
-      '@tarojs/taro-h5': 3.5.2(@types/react@18.0.0)
-      lodash-wechat: 1.0.0
-      taro-hooks: 2.0.3(@tarojs/taro-h5@3.5.2)(@tarojs/taro@3.5.2)
-    dev: false
-
   /@tarojs/api@3.5.2:
     resolution: {integrity: sha512-R4ssrW8yqANtNztclqfQY8oZaHv7EBEhhTPoCBVzqRdzCCXYlW+xB/O2qR0Jy7YJxECTTJh9XC2vf+Hgfm889Q==}
     dependencies:
@@ -4897,6 +4859,10 @@ packages:
       safe-buffer: 5.2.1
     dev: true
 
+  /blueimp-canvas-to-blob-global@3.29.1:
+    resolution: {integrity: sha512-7iiAoFX7nEdm8H8ErlewkvUvNZTMH47jro1sVOuvzCn3xcfNGsYBItmE/N/tcjADgOvCW9juiU/LFJjHUKw5fw==}
+    dev: false
+
   /body-parser@1.20.1:
     resolution: {integrity: sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==}
     engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
@@ -5587,6 +5553,13 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /compressorjs-global@1.1.2:
+    resolution: {integrity: sha512-f1p8JE5GcCHvq+WgKOKg8ER2dUU0ziOkS4adeBZhEOJdDk9u4VwI01zuL+Bpgk0CPwVTMOomPDeGfJUcyU4V3A==}
+    dependencies:
+      blueimp-canvas-to-blob-global: 3.29.1
+      is-blob: 2.1.0
+    dev: false
 
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -9829,7 +9802,6 @@ packages:
 
   /lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
-    dev: true
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -13533,21 +13505,21 @@ packages:
       postcss-value-parser: 3.3.1
     dev: true
 
-  /taro-hooks@2.0.3(@tarojs/taro-h5@3.5.2)(@tarojs/taro@3.5.2):
-    resolution: {integrity: sha512-/KwoCyvrXxi4wTZFkifVY9c/xAjk9mV0CWa1rFnFdV++wLZ6aVwBdXrIsPFBJkrr1fbQrbg/4x6g3aXwv/cIZg==}
+  /taro-hooks@1.5.10(@tarojs/taro@3.5.2)(react@18.0.0):
+    resolution: {integrity: sha512-5k61cduhr5WS2Albue57NGl0e+GbpONwWbMfB9S7abHcB+Az4OQOba/jr+TNF5GBJBX1w+b8T/FR66F8ryBG7w==}
     engines: {node: '>=12.0.0'}
     requiresBuild: true
     peerDependencies:
-      '@tarojs/taro': '>= 3.4.x'
-      '@tarojs/taro-h5': '>= 3.4.x'
+      '@tarojs/taro': '>= 3.x'
+      react: '>=16.9'
     dependencies:
-      '@taro-hooks/compressorjs': 2.0.3
-      '@taro-hooks/shared': 2.0.3
-      '@taro-hooks/use-request': 2.0.3(@tarojs/taro-h5@3.5.2)(@tarojs/taro@3.5.2)
+      '@babel/runtime': 7.22.6
       '@tarojs/taro': 3.5.2(@types/react@18.0.0)
-      '@tarojs/taro-h5': 3.5.2(@types/react@18.0.0)
+      compressorjs-global: 1.1.2
       lodash-wechat: 1.0.0
+      lodash.uniq: 4.5.0
       querystring: 0.2.1
+      react: 18.0.0
     dev: false
 
   /term-size@1.2.0:
